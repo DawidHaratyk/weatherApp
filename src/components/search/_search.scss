@@ -1,0 +1,18 @@
+.weather {
+    min-width: 300px;
+    margin-top: 80px;
+
+    &__headline {
+        font-weight: 500;
+    }
+
+    &__search {
+        width: 100%;
+        border: 1px solid rgb(112, 112, 112);
+        border-radius: 20px;
+        padding: 8px 14px;
+        margin: 10px 0 15px 0;
+        outline: none;
+        font-size: 15px;
+    }
+}
