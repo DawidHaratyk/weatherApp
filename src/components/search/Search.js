@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "../card/Card";
 
-const apiBase = "http://api.openweathermap.org/data/2.5/weather?q=";
+const apiBase = "https://api.openweathermap.org/data/2.5/weather?q=";
 const apiKey = "f354d30d7f42145bb79338aff54efe7d";
 
 const Search = () => {
