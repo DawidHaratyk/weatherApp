@@ -9,9 +9,9 @@ const Card = (currentPlace) => {
     weather: [{ description, icon }],
   } = currentPlace.currentPlace;
 
-  const colorCondition = temp.toString().substr(0, 2) > 29 ? null : "white";
+  const colorCondition = Math.floor(temp.toString()) > 29 ? null : "white";
   const backgroundCondition =
-    temp.toString().substr(0, 2) > 29 ? dayImage : nightImage;
+    Math.floor(temp.toString()) > 29 ? dayImage : nightImage;
   return (
     <div className="card">
       <img
@@ -27,16 +27,14 @@ const Card = (currentPlace) => {
           <span className={`card__circle ${colorCondition}`}></span>
         </div>
         <div className="card__temperature-container">
-          <h1 className="card__temperature">
-            {temp.toString().substr(0, 2)}°C
-          </h1>
+          <h1 className="card__temperature">{Math.floor(temp.toString())}°C</h1>
           <div className="card__average-temperature">
             <span className="card__weather">{description}</span>
             <p className="card__text">
-              Max: {temp_max.toString().substr(0, 2)}°C
+              Max: {Math.floor(temp_max.toString())}°C
             </p>
             <p className="card__text">
-              Min: {temp_min.toString().substr(0, 2)}°C
+              Min: {Math.floor(temp_min.toString())}°C
             </p>
           </div>
         </div>
@@ -50,7 +48,7 @@ const Card = (currentPlace) => {
         <div className="card__weather-details">
           <div className="card__weather-detail">
             <h2 className="card__weather-feeling">
-              {feels_like.toString().substr(0, 2)}°C
+              {Math.floor(feels_like.toString())}°C
             </h2>
             <p className="card__text">Feels like</p>
           </div>
